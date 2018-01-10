@@ -1,0 +1,32 @@
+{
+  "name": "jsonfake_ajax",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "start": "concurrently \"http-server -a localhost -p 3000\" \"sleepms 1000 && open http://localhost:3000/build\"",
+    "build": "webpack --config webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jquery": "^3.2.17",
+    "awesome-typescript-loader": "^3.4.1",
+    "concurrently": "^3.5.1",
+    "http-server": "^0.10.0",
+    "jquery": "^3.2.1",
+    "sleep-ms": "^2.0.1",
+    "source-map-loader": "^0.2.3",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZavodPodushek/Project.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ZavodPodushek/Project/issues"
+  },
+  "homepage": "https://github.com/ZavodPodushek/Project#readme",
+  "description": "Cooperative project"
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API UI</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<main>
+    <div class="container-fluid main-window">
+                                        <!--Input section-->
+        <div class="row align-items-center main-window-header">
+            <div class="col-12">
+                <form class="form">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Enter URL" aria-label="Enter URL"
+                               id="url" required>
+                        <span class="input-group-btn">
+                        <button type ="submit" class="btn btn-outline-success" id="send">Send</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                    </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+                                        <!--Output section-->
+        <div id="output" style="display: none">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-result-tab" data-toggle="tab" href="#nav-result" role="tab" aria-controls="nav-result" aria-selected="true">Result</a>
+                <a class="nav-item nav-link" id="nav-status-tab" data-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="false">Status</a>
+                <a class="nav-item nav-link" id="nav-heads-tab" data-toggle="tab" href="#nav-heads" role="tab" aria-controls="nav-heads" aria-selected="false">Heads</a>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-result" role="tabpanel" aria-labelledby="nav-result-tab"><pre class="result"></pre></div>
+            <div class="tab-pane fade" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab"><pre class="status"></pre></div>
+            <div class="tab-pane fade" id="nav-heads" role="tabpanel" aria-labelledby="nav-heads-tab"><pre class="heads"></pre></div>
+        </div>
+        </div>
+        <div id="alert" style="display: none"></div>
+    </div>
+</main>
+<aside>
+    <table class="table table-bordered table-sm" id="history"><tbody></tbody></table>
+</aside>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+
+<script src="dist/bundle.js"></script>
+</body>
+</html>
